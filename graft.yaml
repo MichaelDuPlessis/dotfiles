@@ -1,0 +1,45 @@
+managers:
+  arch: pacman -S --noconfirm
+  macos: brew install
+  ubuntu: sudo apt install -y
+packages:
+  helix:
+    os:
+    - macos
+    - linux
+    files:
+      helix/: ~/.config/helix
+  starship:
+    os:
+    - macos
+    - linux
+    files:
+      starship/starship.toml: ~/.config/starship.toml
+  fastfetch:
+    os:
+    - macos
+    - linux
+  ghostty:
+    os:
+    - macos
+    - linux
+    files:
+      ghostty/: ~/.config/ghostty
+  fish:
+    os:
+    - macos
+    - linux
+    files:
+      fish/: ~/.config/fish
+  pandoc:
+    os:
+    - macos
+    - linux
+    files:
+      pandoc/: ~/.config/pandoc
+  yazi:
+    os:
+    - macos
+    - linux
+    files:
+      yazi/: ~/.config/yazi

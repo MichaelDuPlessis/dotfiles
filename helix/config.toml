@@ -1,0 +1,34 @@
+theme = "dracula"
+
+[editor]
+color-modes = true
+line-number = "relative"
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
+right = ["version-control", "selections", "total-line-numbers", "position"]
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.indent-guides]
+render = true
+
+# [editor.inline-diagnostics]
+# cursor-line = "error"
+
+[keys.insert]
+"C-;" = "normal_mode"
+
+[keys.select]
+"C-;" = "normal_mode"
+"X" = "extend_line_above"
+
+[keys.normal]
+"X" = "extend_line_above"
+
+[keys.normal.g]
+a = "code_action"
