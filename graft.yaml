@@ -1,5 +1,6 @@
 managers:
   arch: pacman -S --noconfirm
+  cachyos: pacman -S --noconfirm
   macos: brew install
   ubuntu: sudo apt install -y
 packages:
@@ -43,3 +44,15 @@ packages:
     - linux
     files:
       yazi/: ~/.config/yazi
+  hypr:
+    os:
+    - linux
+    files:
+      hypr/: ../.config/hypr
+    link_mode: symlink
+  waybar:
+    os:
+    - linux
+    files:
+      waybar/: ../.config/waybar
+    link_mode: symlink
