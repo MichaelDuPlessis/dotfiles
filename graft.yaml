@@ -1,49 +1,61 @@
 managers:
-  arch: pacman -S --noconfirm
-  cachyos: pacman -S --noconfirm
+  arch: sudo pacman -S --noconfirm
+  cachyos: sudo pacman -S --noconfirm
   macos: brew install
   ubuntu: sudo apt install -y
 packages:
   helix:
+    install: helix
     os:
     - macos
     - linux
     files:
       helix/: ~/.config/helix
   starship:
+    install: starship
     os:
     - macos
     - linux
     files:
       starship/starship.toml: ~/.config/starship.toml
   fastfetch:
+    install: fastfetch
     os:
     - macos
     - linux
   ghostty:
+    install: ghostty
     os:
     - macos
     - linux
     files:
       ghostty/: ~/.config/ghostty
+    depends_on:
+      - jetbrains-mono-nerd
+  jetbrains-mono-nerd:
+    install: ttf-jetbrains-mono-nerd
+    os:
+    - macos
+    - linux
   fish:
+    install: fish
     os:
     - macos
     - linux
     files:
       fish/: ~/.config/fish
   pandoc:
+    install: pandoc
     os:
     - macos
     - linux
     files:
       pandoc/: ~/.config/pandoc
   yazi:
+    install: yazi
     os:
     - macos
     - linux
-    files:
-      yazi/: ~/.config/yazi
   hypr:
     os:
     - linux
